@@ -1,0 +1,16 @@
+div {
+	text-align: center;
+}
+input{
+	margin-top: 10px;
+	width: 200px;
+}
+button{
+	margin-top: 16px;
+	margin-bottom: 10px;
+}
+
+
+.hide-this-bullhit {
+	display: none !important;
+}

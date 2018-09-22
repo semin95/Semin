@@ -1,0 +1,11 @@
+<div>
+	<h1 id="naslov"> Informacije </h1>
+</div>
+<div class="text-center" *ngIf="user">
+    <p>Ime: {{ user.firstName }}</p>
+	<p>Prezime: {{ user.lastName }}</p>
+	<p>Adresa: {{ user.address }}</p>
+	<p>Telefon: {{ user.phone }}</p>
+	<p>Email: {{ user.email }}</p>
+	<p>Username: {{ user.username }}</p>
+</div>

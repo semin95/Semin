@@ -1,0 +1,13 @@
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\bin\Debug\DodatniPodaci.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\bin\Debug\DodatniPodaci.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\bin\Debug\Zadaca 2 RPR.exe
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\bin\Debug\sastojci.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\bin\Debug\Zadaca 2 RPR.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\bin\Debug\sastojci.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\obj\Debug\DodatniPodaci.csprojResolveAssemblyReference.cache
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\obj\Debug\DodatniPodaci.dodatniPodaci_u.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\obj\Debug\DodatniPodaci.csproj.GenerateResource.Cache
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\obj\Debug\DodatniPodaci.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\obj\Debug\DodatniPodaci.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\bin\Debug\InformacijeOVremenu.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\DodatniPodaci\bin\Debug\InformacijeOVremenu.pdb

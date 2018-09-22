@@ -1,0 +1,205 @@
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <a class="navbar-brand" href="index.html">T e l e N a s h</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+        <a class="nav-link" routerLink="/pocetna">
+          <i class="fa fa-fw fa-home"></i>
+          <span> </span>
+          <span class="nav-link-text">Početna</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+        <a class="nav-link" routerLink="/mojeusluge">
+          <i class="fa fa-fw fa-handshake-o"></i>
+          <span> </span>
+          <span class="nav-link-text">Moje Usluge</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <a class="nav-link" routerLink="/mojizahtjevi">
+          <i class="fa fa-fw fa-table"></i>
+          <span> </span>
+          <span class="nav-link-text">Moji zahtjevi</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+        <a class="nav-link" routerLink="/incident">
+          <i class="fa fa-fw fa-gears"></i>
+          <span> </span>
+          <span class="nav-link-text">Moji incidenti</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav sidenav-toggler">
+      <li class="nav-item">
+        <a class="nav-link text-center" id="sidenavToggler">
+          <i class="fa fa-fw fa-angle-left"></i>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <form class="form-inline my-2 my-lg-0 mr-lg-2">
+          <div class="input-group">
+            <input class="form-control" type="text" placeholder="Search for...">
+            <span class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+          </div>
+        </form>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal5">
+          <i class="fa fa-fw fa-sign-out"></i>Odjavi se</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="content-wrapper">
+
+  <div class="container-fluid">
+
+    <div class="text-center">
+      <h1 id="naslov" style="color: rgb(233, 118, 24); margin-bottom: 30px;"> Moji zahtjevi</h1>
+      <button type="button" class="btn btn-primary btn-lg"
+              style="background-color: rgb(77, 77, 77)!important; margin-bottom: 30px; border-color: rgb(245, 87, 14);"
+              data-toggle="modal" data-target="#createRequest">
+        <i class="fa fa-edit left"></i> Podnesi novi zahtjev
+      </button>
+    </div>
+    <app-edit-request [id]="'createRequest'" (create)="addItem($event)"></app-edit-request>
+
+    <!--{{zahtjevi | json}}}-->
+    <div class="card card-image mb-3" *ngFor="let zahtjev of zahtjevi; let i = index;"
+         style="width: 1000px; margin-left: 110px; margin-bottom: 100px; background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+      <div style="background-color: rgba(49, 49, 49, 0.541);">
+        <!-- Content -->
+        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+          <div style="width: 1000px">
+            <h5 class="pink-text" style="text-align: center">
+              <i class="fa fa-edit" style="color: rgb(238, 143, 65)"></i> Zahtjev</h5>
+
+            <h3 class="card-title pt-2"
+                style="text-align: center; font-size: 28px; border-bottom-width: 1px; border-bottom-color:  rgb(233, 118, 24);">
+              <strong style="color: rgb(238, 116, 34)">{{ zahtjev.name }}</strong>
+            </h3>
+
+            <h6
+              style="text-align: center; font-size: 20px; color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-color:  rgb(233, 118, 24);">
+              Status:
+              <strong style="color: rgb(241, 241, 241)">{{ zahtjev.status.name }}</strong>
+            </h6>
+            <br>
+
+            <h6
+              style="text-align: center; font-size: 20px; color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-color:  rgb(233, 118, 24);">
+              Prioritet:
+              <strong style="color: rgb(247, 247, 247)">{{ zahtjev.userPriority.name }}</strong>
+            </h6>
+
+            <button type="button" class="btn btn-light" style="margin-right: 20px; margin-top: 30px;"
+                    (click)="prikaziDetalje(zahtjev)" data-toggle="modal" data-target="#showDetails">
+              <i class="fa fa-clone left"></i> Detalji zahtjeva
+            </button>
+
+            <button type="button" class="btn btn-danger" style="margin-right: 20px; margin-top: 30px;"
+                    (click)="otkaziZahtjev(zahtjev, i)" data-toggle="modal" data-target="#delete2Modal">
+              <i class="fa fa-close left"></i> Otkaži zahtjev
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <app-edit-request [id]="'showDetails'" [request]="odabrani_zahjev"></app-edit-request>
+    </div>
+
+    <!--<div class="text-center" id="usluge-tabela">
+      <table class="table table-hover">
+        <thead class="zaglavlje">
+          <tr>
+            <th class="naziv-kolone" scope="col"> Naziv zahtjeva </th>
+            <th class="naziv-kolone" scope="col"> Status </th>
+            <th class="naziv-kolone" scope="col"> Prioritet </th>
+            <th class="naziv-kolone" scope="col"> Detalji </th>
+            <th class="naziv-kolone" scope="col"> Otkaži zahtjev </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="red" scope="row" *ngFor="let zahtjev of zahtjevi">
+            <td class="kolona">{{ zahtjev.name }}</td>
+            <td class="kolona">{{ zahtjev.status.name }}</td>
+            <td class="kolona">{{ zahtjev.userPriority.name }}</td>
+            <td class="kolona-btn">
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" (click)="prikaziDetalje(zahtjev)">Detalji</button>
+            </td>
+            <td class="kolona-btn">
+              <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#delete2Modal" (click)="otkaziZahtjev(zahtjev)">Otkaži zahtjev</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>-->
+
+    <div class="modal fade" id="delete2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel"> Zahtjev uspješno otkazan!</h3>
+          </div>
+          <div class="modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="btn_modal_usluga" data-dismiss="modal"
+                    style="background-color: rgb(223, 99, 27)!important;">Zatvori
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--</div>-->
+
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © TeleNash 2018</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Želite se odjaviti?</h5>
+            <button class="close" id="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Odustani</button>
+            <a class="btn btn-primary" style="background-color: rgb(226, 101, 28)!important;" (click)="odjaviSe()">Odjavi
+              se</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+<router-outlet></router-outlet>

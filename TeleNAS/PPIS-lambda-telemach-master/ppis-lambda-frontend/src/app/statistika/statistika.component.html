@@ -1,0 +1,118 @@
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="#">T e l e N a s h </a>
+    <span style="margin-left: 470px; color: rgb(224, 224, 224); font-size: 20px;">Menadžer zahtjeva i usluga </span>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" routerLink="/requestManagerZahtjevi">
+            <i class="fa fa-fw fa-table"></i>
+            <span> &ensp; </span>
+            <span class="nav-link-text">Zahtjevi</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" routerLink="/statistika/zahtjevi">
+            <i class="fa fa-fw fa-bar-chart"></i>
+            <span> </span>
+            <span class="nav-link-text">Statistika zahtjeva</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" routerLink="/requestManagerUsluge">
+            <i class="fa fa-fw fa-handshake-o"></i>
+            <span> </span>
+            <span class="nav-link-text">Usluge</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal5">
+            <i class="fa fa-fw fa-sign-out"></i>Odjavi se</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+
+    <div class="container-fluid">
+      <mat-card style="text-align: center;">
+        <mat-card-title>{{title}}</mat-card-title>
+        <mat-radio-group [value]="selectedReportType">
+          <mat-radio-button *ngFor="let reportType of reportTypes" [value]="reportType" (change)="onSelectReportType(reportType)" style="margin: 10px;">{{reportType}}
+          </mat-radio-button>
+        </mat-radio-group>
+
+        <div style="display: block; margin: auto; width: 200px">
+          <mat-form-field *ngIf="selectedReportType">
+            <mat-select [(value)]="selectedYear">
+              <mat-option *ngFor="let year of years" [value]="year">{{year}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field *ngIf="selectedReportType == reportTypes[0]">
+            <mat-select [(value)]="selectedMonth">
+              <mat-option *ngFor="let month of months" [value]="month.value">{{month.viewValue}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <button mat-button (click)="generateReport()" style="background-color: rgb(221, 95, 36); color: white;" class="btn-generate" [disabled]="!selectedReportType || !selectedYear ||(this.selectedReportType === this.reportTypes[0] && !selectedMonth)">
+          Generiši izvještaj
+        </button>
+      </mat-card>
+
+      <div class="charts">
+        <div class="chart-pie" *ngIf="selectedReportType == reportTypes[0]">
+          <div [chart]="pieChart"></div>
+        </div>
+        <div class="chart-columns" *ngIf="selectedReportType == reportTypes[1]">
+          <div [chart]="columnChart"></div>
+        </div>
+      </div>
+
+
+    </div>
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © TeleNash 2018</small>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Želite se odjaviti?</h5>
+            <button class="close" id="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Odustani</button>
+            <a class="btn btn-primary" style="background-color: rgb(226, 101, 28)!important;" (click)="odjaviSe()">Odjavi se</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<router-outlet></router-outlet>

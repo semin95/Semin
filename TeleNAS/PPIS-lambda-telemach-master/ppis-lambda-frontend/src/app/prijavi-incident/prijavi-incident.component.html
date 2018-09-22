@@ -1,0 +1,39 @@
+<div class="panel panel-default" class="detalji_box">
+<div class="text-center">
+    <h1 id="naslov"> Prijava incidenta </h1>
+    <h5 id="naslov_linija"> ______________________________________ </h5>  
+</div>
+
+<div>
+  <div id="ime">
+     <label id="ime_text" class="naslov">Ime: </label>
+     <input type ="text" id="ime_text_u" [(ngModel)]="incident.name" class="polje"/>
+  </div>
+  <div>
+     <label id="opis_text" class="naslov">Opis: </label>
+     <input type ="text" id="opis_text_u" [(ngModel)]="incident.description" class="polje" />
+  </div>
+  <div>
+     <label id="datum_text" class="naslov">Datum: </label>
+     <input type="date" id="datum_text_u" [(ngModel)]="incident.date" class="polje" />
+  </div>
+  <div>
+     <label class="naslov">Način podnošenja: </label>
+     <select class="polje">
+  		<option value="..." >...</option>
+	 </select>
+  </div>
+  <div>
+     <label class="naslov">Način odgovora: </label>
+     <select class="polje">
+  		<option value="..." >...</option>
+	 </select>
+  </div>
+
+  <div>
+     <button (click)="addIncident()" class="prijavi_incident">Prijavi</button>
+  </div>
+</div> 
+<div *ngIf="bookName" [ngClass] = "'success'"> {{bookName}} Added. </div>
+<div *ngIf="errorMessage" [ngClass] = "'error'"> {{errorMessage}} </div> 
+</div>

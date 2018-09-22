@@ -1,0 +1,83 @@
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.apoteka.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.KupovinaLijeka.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Pravila.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Properties.Resources.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Racun.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.UnosLijeka.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.UnosOsobe.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.csproj.GenerateResource.Cache
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe.config
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.pdb
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.exe
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.pdb
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.csprojResolveAssemblyReference.cache
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.PreporukaZaPenzionere.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.PreporukaIspis.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\sastojci.dll
+C:\Users\Semin\Desktop\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\sastojci.pdb
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe.config
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.exe
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.pdb
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.pdb
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\sastojci.dll
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\sastojci.pdb
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.csprojResolveAssemblyReference.cache
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.apoteka.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.KupovinaLijeka.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Pravila.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.PreporukaIspis.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.PreporukaZaPenzionere.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Properties.Resources.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Racun.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.UnosLijeka.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.UnosOsobe.resources
+C:\Users\Semin\Desktop\Zadaca 2 RPR (2)\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.csproj.GenerateResource.Cache
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe.config
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.exe
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\sastojci.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\sastojci.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.csprojResolveAssemblyReference.cache
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.apoteka.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.KupovinaLijeka.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Pravila.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.PreporukaIspis.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.PreporukaZaPenzionere.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Properties.Resources.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Racun.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.UnosLijeka.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.UnosOsobe.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.csproj.GenerateResource.Cache
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\DodatniPodaci.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\InformacijeOVremenu.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\DodatniPodaci.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\InformacijeOVremenu.pdb
+C:\Users\Semin\Desktop\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe.config
+C:\Users\Semin\Desktop\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.exe
+C:\Users\Semin\Desktop\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.pdb
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe.config
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.exe
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.pdb
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.exe
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\Zadaca 2 RPR.pdb
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\DodatniPodaci.dll
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\sastojci.dll
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\InformacijeOVremenu.dll
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\DodatniPodaci.pdb
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\sastojci.pdb
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\bin\Debug\InformacijeOVremenu.pdb
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.csprojResolveAssemblyReference.cache
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.apoteka.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.KupovinaLijeka.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Pravila.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.PreporukaIspis.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.PreporukaZaPenzionere.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Properties.Resources.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.Racun.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.UnosLijeka.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca_2_RPR.UnosOsobe.resources
+D:\Fakultet\3. semestar svi dokumenti\Razvoj programski rjesenja\Zadaca 3\Zadaca 2 RPR\Zadaca 2 RPR\obj\Debug\Zadaca 2 RPR.csproj.GenerateResource.Cache

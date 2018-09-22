@@ -1,0 +1,14 @@
+#intro {
+   position:fixed;
+   left:33%;
+   width:420px;
+}
+input{
+	margin-top: 10px;
+	width: 200px;
+}
+
+
+.hide-this-bullhit {
+    display: none !important;
+}

@@ -1,0 +1,263 @@
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <a class="navbar-brand" href="#">T e l e N a s h </a>
+      <span style = "margin-left: 470px; color: rgb(224, 224, 224); font-size: 20px;">Menadžer zahtjeva i usluga </span> 
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+            <a class="nav-link" routerLink="/requestManagerZahtjevi">
+              <i class="fa fa-fw fa-table"></i>
+              <span> &ensp; </span>
+              <span class="nav-link-text">Zahtjevi</span>
+            </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+              <a class="nav-link" routerLink="/statistika/zahtjevi">
+                  <i class="fa fa-fw fa-bar-chart"></i>
+                  <span> </span>
+                  <span class="nav-link-text">Statistika zahtjeva</span>
+              </a>
+          </li>
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+              <a class="nav-link" routerLink="/requestManagerUsluge">
+                  <i class="fa fa-fw fa-handshake-o"></i>
+                  <span> </span>
+                  <span class="nav-link-text">Usluge</span>
+              </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav sidenav-toggler">
+          <li class="nav-item">
+            <a class="nav-link text-center" id="sidenavToggler">
+              <i class="fa fa-fw fa-angle-left"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="modal" data-target="#exampleModal5">
+              <i class="fa fa-fw fa-sign-out"></i>Odjavi se</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="content-wrapper">
+  
+      <div class="container-fluid">
+        <div class="text-center">
+          <h1 id="naslov" style="color: rgb(233, 118, 24); margin-bottom: 30px; margin-top: 20px;"> Zahtjevi </h1>
+        </div>
+
+        <div class="text-center" id="incidenti-tabela">
+            <table class="table table-hover">
+              <thead class="zaglavlje">
+                <tr>
+                  <th class="naziv-kolone" scope="col"> Naziv zahtjeva </th>
+                  <th class="naziv-kolone" scope="col"> Prioritet </th>
+                  <th class="naziv-kolone" scope="col"> Odjel </th>
+                  <th class="naziv-kolone" scope="col"> Status</th>
+                  <th class="naziv-kolone" scope="col"> Radni nalozi</th>
+                  <th class="naziv-kolone" scope="col"> Datum prijave </th>
+                  <th class="naziv-kolone" scope="col"> Prikaži detalje </th>
+                  <th class="naziv-kolone" scope="col"> Kreiraj nalog </th>
+                  <th class="naziv-kolone" scope="col"> Izbriši zahtjev </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="red" scope="row" *ngFor="let zahtjev of zahtjevi, let i = index" [class.selected]="zah === selectedRequest">
+                  <td class="kolona">{{ zahtjev.name }}</td>
+                  <td class="kolona">{{ zahtjev.adminPriority.name }}</td>
+                  <td class="kolona">{{ zahtjev.department.name }}</td>
+                  <td class="kolona">{{ zahtjev.status.name }}</td>
+                  <td class="kolona" [innerHTML]="zahtjev.radniNalog?.toUpperCase()"></td>
+                  <td class="kolona">{{ zahtjev.date | date:'dd-MM-yyyy' }}</td>
+                  <td class="kolona-btn">
+                    <button type="button" class="btn btn-outline-secondary" id="prikazi_btn" data-toggle="modal" data-target="#exampleModal" (click)="prikaziDetalje(zahtjev)">Prikaži detalje</button>
+                  </td>
+                  <td class="kolona-btn">
+                    <button type="button" class="btn btn-outline-secondary" id="prikazi_btn" data-toggle="modal" data-target="#nalogModal" (click)="oznaciZahtjevZaNalog(zahtjev)">Kreiraj nalog</button>
+                  </td>
+                  <td class="kolona-btn">
+                    <button type="button" class="btn btn-outline-danger" id="prikazi_btn" data-toggle="modal" data-target="#delete1Modal" (click)="izbrisiZahtjev(zahtjev.id, i)">Izbriši zahtjev</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          
+          <div class="modal fade" id="delete1Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel"> Zahtjev uspješno izbrisan!</h3>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" id="btn_modal_usluga" data-dismiss="modal">Zatvori</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div *ngIf="odabrani_zahtjev" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel"> Detalji o podnesnom zahtjevu </h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Naziv zahtjeva:</label>
+                      <input type="text" class="form-control" [(ngModel)]="odabrani_zahtjev.name" value="{{ odabrani_zahtjev.name }}" name="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Opis zahtjeva:</label>
+                      <textarea class="form-control" style="height: 150px" [(ngModel)]="odabrani_zahtjev.description" value="{{ odabrani_zahtjev.description }}" name="description"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Način odgovora na zahtjev:</label>
+                      <input type="text" class="form-control" [(ngModel)]="odabrani_zahtjev.wayOfResponse" value="{{ odabrani_zahtjev.wayOfResponse }}" name="nacin">
+                    </div>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Datum zahtjeva:</label>
+                      <input type="text" class="form-control" [(ngModel)]="odabrani_zahtjev.date" value="{{ odabrani_zahtjev.date | date:'dd-MM-yyyy' }}" name="datum"
+                        disabled>
+                    </div>
+                    <div class="form-group">
+                      <label for="status" class="col-form-label">Status:</label>
+                      <select class="form-control" id="status" [(ngModel)]="odabrani_zahtjev.status" name="status">
+                        <option *ngFor="let s of statusi"
+                                [ngValue]="s.id === odabrani_zahtjev?.status.id ? odabrani_zahtjev.status : s">
+                          {{s.name}}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="hitnost" class="col-form-label">Administratorov prioritet:</label>
+                      <select class="form-control" id="hitnost" [(ngModel)]="odabrani_zahtjev.adminPriority" name="priority">
+                        <option *ngFor="let p of prioriteti"
+                                [ngValue]="p.id === odabrani_zahtjev?.adminPriority.id ? odabrani_zahtjev.adminPriority : p">
+                          {{p.name}}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-form-label">Korisnikov prioritet:</label>
+                      <input type="text" class="form-control" [(ngModel)]="odabrani_zahtjev.userPriority.name" name="user-priority"
+                        disabled>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="izmijeniZahtjev()">Izmijeni podatke</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="form-group">
+                  <h4> Ostavi komentar: </h4>
+                  <table class="form-group">
+                    <thead>
+                      <tr>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Komentar</th>
+                        <th scope="col">Datum</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="red" scope="row" *ngFor="let feedback of feedbackRequests">
+                        <td>{{feedback.user.username}}</td>
+                        <td>{{feedback.comment}}</td>
+                        <td>{{feedback.date | date:'dd-MM-yyyy'}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <input type="text" class="form-control novi_komentar" placeholder="Komentar" aria-label="Komentar" aria-describedby="basic-addon2"
+                        [(ngModel)]="new_feedback.comment" name="komentar">
+                    </div>
+                    <div class="col-lg-6">
+                      <button type="button" class="btn btn-primary btn-lg btn-block btn_novi_zahtjev" (click)="kreirajKomentar()">Pošalji</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="modal fade" id="nalogModal" tabindex="-1" role="dialog" aria-labelledby="nalogModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel"> Podnesi novi nalog </h3>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Naziv i redni broj naloga:</label>
+                      <input type="text" class="form-control" [(ngModel)]="nalogNaziv" name="nalog">
+                    </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Tekst naloga:</label>
+                      <textarea class="form-control" style="height: 150px" [(ngModel)]="nalogTekst" name="tekst"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="podnesiNalog()">Podnesi nalog</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+        <footer class="sticky-footer">
+          <div class="container">
+            <div class="text-center">
+              <small>Copyright © TeleNash 2018</small>
+            </div>
+          </div>
+        </footer>
+  
+        <!-- Logout Modal-->
+        <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Želite se odjaviti?</h5>
+                <button class="close" id="close" type="button" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Odustani</button>
+                <a class="btn btn-primary" style="background-color: rgb(226, 101, 28)!important;" (click)="odjaviSe()">Odjavi se</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+  
+  
+  <router-outlet></router-outlet>

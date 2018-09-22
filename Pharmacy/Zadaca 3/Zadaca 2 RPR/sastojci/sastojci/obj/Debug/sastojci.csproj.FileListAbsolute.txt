@@ -1,0 +1,4 @@
+C:\Users\Semin\Desktop\sastojci\sastojci\bin\Debug\sastojci.dll
+C:\Users\Semin\Desktop\sastojci\sastojci\bin\Debug\sastojci.pdb
+C:\Users\Semin\Desktop\sastojci\sastojci\obj\Debug\sastojci.dll
+C:\Users\Semin\Desktop\sastojci\sastojci\obj\Debug\sastojci.pdb

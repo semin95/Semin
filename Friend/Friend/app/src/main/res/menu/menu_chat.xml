@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.friend.friendv2.ChatActivity">
+
+    <item
+        android:id="@+id/action_openProfile"
+        android:icon="@mipmap/ic_person_black_24dp"
+        android:title="Open profile"
+        app:showAsAction="always" />
+
+
+</menu>

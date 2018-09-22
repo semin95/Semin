@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#D5FCFF"
+    android:layout_height="match_parent"
+    tools:context="com.example.radix_sort.radixsort.Algoritam">
+
+    <TextView
+        android:id="@+id/brojAlgoritam"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_height="wrap_content"
+        android:text="Broj" />
+
+    <TextView
+        android:id="@+id/kantaAlgoritam"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/brojAlgoritam"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:text="Bucket 2:" />
+
+    <ListView
+        android:id="@+id/brojeviUKanti"
+        android:layout_below="@id/kantaAlgoritam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/pokreniAlgoritam" />
+
+    <Button
+        android:id="@+id/buttonAlgoritam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#87CEFA"
+        android:text="Next number" />
+
+</RelativeLayout>

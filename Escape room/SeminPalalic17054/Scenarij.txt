@@ -1,0 +1,6 @@
+Napomena: Igra se jedino moze pokrenuti u unity i svjetlo sam prilagodio unity. Imam dosta errora koje nisam stigao popraviti.
+
+Level 1: Da bi se preslo u novi level treba pritisnuti tipku "O" na tastaturi.
+Level 2: Da bi se preslo u novi level treba kliknuti broj 9 na zidu
+Level 3: Da bi se preslo u novi level treba kliknuti na poster koji se nalazi na zidu.
+Level 4 :Da bi se igra zavrsila treba pritisnuti cube ispod kreveta, pa onda upisati sifru 1892.

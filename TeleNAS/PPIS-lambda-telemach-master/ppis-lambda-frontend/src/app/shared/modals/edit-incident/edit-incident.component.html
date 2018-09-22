@@ -1,0 +1,78 @@
+<div class="modal fade" [id]="id" tabindex="-1" role="dialog" aria-labelledby="editIncidentModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel"> {{title}} </h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form #incidentForm="ngForm">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="name" class="col-form-label">Naziv incidenta:</label>
+            <input type="text" required class="form-control" id="name" name="name"
+                   [(ngModel)]="incident && incident.name">
+          </div>
+          <div class="form-group">
+            <label for="description" class="col-form-label">Opis incidenta:</label>
+            <textarea class="form-control" id="description" style="height: 150px" required
+                      [(ngModel)]="incident && incident.description"
+                      name="description">{{ incident?.description }}</textarea>
+          </div>
+          <div class="form-group">
+            <label for="wayOfSubmissions" class="col-form-label">Način prijave incidenta:</label>
+            <select class="form-control" id="wayOfSubmissions" [(ngModel)]="incident && incident.wayOfSubmission"
+                    name="wayOfSubmissions" required>
+              <option *ngFor="let wayOfSubmission of keys(wayOfSubmissions)"
+                      [value]="wayOfSubmission">{{ wayOfSubmissions[wayOfSubmission] }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="wayOfResponse" class="col-form-label">Način odgovaranja:</label>
+            <select class="form-control" id="wayOfResponse"
+                    [(ngModel)]="incident && incident.wayOfResponse"
+                    name="wayOfResponse" required>
+              <option *ngFor="let wayOfResponse of keys(wayOfResponses)"
+                      [value]="wayOfResponse">{{wayOfResponses[wayOfResponse] }}
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="userPriority" class="col-form-label">Korisnički prioritet:</label>
+            <select class="form-control" id="userPriority"
+                    [(ngModel)]="incident && incident.userPriority" [compareWith]="compareByName"
+                    name="userPriority" required>
+              <option *ngFor="let priority of priorities" [ngValue]="priority">{{ priority.name }}</option>
+            </select>
+          </div>
+          <div class="form-group" *ngIf="authService.isIncidentManager()">
+            <label for="adminPriority" class="col-form-label">Administratorski prioritet:</label>
+            <select class="form-control" id="adminPriority"
+                    [(ngModel)]="incident && incident.adminPriority" [compareWith]="compareByName"
+                    name="adminPriority" required>
+              <option *ngFor="let priority of priorities" [ngValue]="priority">{{ priority.name }}</option>
+            </select>
+          </div>
+          <div class="form-group" *ngIf="authService.isIncidentManager()">
+            <label for="status" class="col-form-label">Status:</label>
+            <select class="form-control" id="status" [(ngModel)]="incident && incident.status" name="status"
+                    [compareWith]="compareByName" required>
+              <option *ngFor="let status of statuses" [ngValue]="status">{{ status.name }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btn_zatvori" data-dismiss="modal">Zatvori</button>
+          <button *ngIf="!disabled" type="submit" class="btn" data-dismiss="modal" id="btn_submit"
+                  (click)="editIncident()"
+                  [disabled]="!incidentForm.form.valid" [ngClass]="{'btn-primary': incidentForm.form.valid}">
+            Spasi incident
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.friend.friendv2.SetupActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tekst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:text="Setup additional profile"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tekst2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"
+                android:text="information"
+                android:textSize="30sp" />
+
+
+            <EditText
+                android:id="@+id/currentCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:hint="Current city..."
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/wallet_holo_blue_light"/>
+
+            <EditText
+                android:id="@+id/hometown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:hint="Hometown..."
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/wallet_holo_blue_light"/>
+
+            <EditText
+                android:id="@+id/highScool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:hint="High school..."
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/wallet_holo_blue_light"/>
+
+            <EditText
+                android:id="@+id/college"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:hint="College..."
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/wallet_holo_blue_light"/>
+
+            <EditText
+                android:id="@+id/work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:hint="Work..."
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/wallet_holo_blue_light"/>
+
+            <EditText
+                android:id="@+id/relationshipStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:hint="Relationship status..."
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/wallet_holo_blue_light"/>
+
+            <EditText
+                android:id="@+id/describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginTop="5dp"
+                android:hint="Say something about yourself..."
+                android:inputType="textMultiLine"
+                android:backgroundTint="@color/wallet_holo_blue_light"/>
+
+            <Button
+                android:id="@+id/setup_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="45dp"
+                android:layout_marginTop="30dp"
+                android:background="#87CEFA"
+                android:text="Submit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RMA15_17054</string>
+    <string name="biografija">Biografija</string>
+    <string name="imeIPrezime">Ime i prezime</string>
+    <string name="podijeli">Podijeli</string>
+    <string name="pretraga">Pretraga</string>
+    <string name="webStranica">Web stranica</string>
+</resources>

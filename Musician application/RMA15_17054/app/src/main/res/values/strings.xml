@@ -1,0 +1,132 @@
+<resources>
+    <string name="app_name">RMA15_17054</string>
+    <string name="imeIPrezime">Ime i prezime</string>
+    <string name="webStranica">Web stranica</string>
+    <string name="biografija">Biografija</string>
+    <string name="podijeli">Podijeli</string>
+    <string name="pretraga">Pretraga</string>
+
+    <string-array name="imena_muzicara">
+        <item>Ray Charles</item>
+        <item>Daft Punk</item>
+        <item>Metallica</item>
+        <item>Michael Jackson</item>
+        <item>AC/DC</item>
+    </string-array>
+
+    <string-array name="zanrovi">
+        <item>Jazz</item>
+        <item>Electronic music</item>
+        <item>Metal</item>
+        <item>Pop music</item>
+        <item>Rock</item>
+    </string-array>
+
+    <string-array name="web_stranice">
+        <item>http://www.raycharles.com/</item>
+        <item>https://www.daftpunk.com/</item>
+        <item>https://metallica.com/</item>
+        <item>http://www.michaeljackson.com/us/</item>
+        <item>http://www.acdc.com/</item>
+    </string-array>
+
+    <string-array name="biografije">
+        <item>Raymond Charles Robinson (September 23, 1930 – June 10, 2004), professionally known as Ray Charles, was an American singer, songwriter, musician, and composer. He was sometimes referred to as "The Genius",and was also nicknamed "The High Priest of Soul."</item>
+        <item>Daft Punk are an electronic music duo consisting of French musicians Guy-Manuel de Homem-Christo and Thomas Bangalter. The two achieved significant popularity in the late 1990s as part of the French house movement and were met with continued success in the years following, combining elements of house music with funk, techno, disco, rock, and synthpop.</item>
+        <item>Metallica is an American heavy metal band formed in Los Angeles, California. Metallica was formed in 1981 when vocalist(guitarist) James Hetfield responded to an advertisement posted by drummer Lars Ulrich in a local newspaper. The band current line-up comprises founding members Hetfield and Ulrich, longtime lead guitarist Kirk Hammett and bassist Robert Trujillo. Lead guitarist Dave Mustaine and bassists Ron McGovney, Cliff Burton and Jason Newsted are former members of the band.</item>
+        <item>Michael Joseph Jackson (August 29, 1958 – June 25, 2009) was an American singer, songwriter, record producer, dancer, and actor. Called the King of Pop, his contributions to music, dance and fashion, along with his publicized personal life, made him a global figure in popular culture for over four decades.</item>
+        <item>AC/DC are an Australian hard rock band, formed in November 1973 by brothers Malcolm and Angus Young, who continued as members until Malcolm illness and departure in 2014. Commonly referred to as a hard rock or blues rock band, they are also considered pioneers of heavy metal and are sometimes classified as such, though they have always dubbed their music as simply "rock and roll".</item>
+    </string-array>
+
+    <string-array name="pjesme">
+        <item>Pjesma broj 5.</item>
+        <item>Pjesma broj 4.</item>
+        <item>Pjesma broj 3.</item>
+        <item>Pjesma broj 2.</item>
+        <item>Pjesma broj 1.</item>
+    </string-array>
+
+    <string-array name="Ray_Charles_p">
+        <item>Hit the Road Jack</item>
+        <item>Georgia On My Mind</item>
+        <item>Mess Around</item>
+        <item>America the Beatiful</item>
+        <item>I Got a Woman</item>
+    </string-array>
+
+    <string-array name="Daft_Punk_p">
+        <item>Harder, Better, Faster, Stronger</item>
+        <item>One More Time</item>
+        <item>Get Lucky</item>
+        <item>Around the World</item>
+        <item>Da Funk</item>
+    </string-array>
+
+    <string-array name="Metallica_p">
+        <item>Master of Puppets</item>
+        <item>One</item>
+        <item>Fade to Black</item>
+        <item>For Whom the Bell Tolls</item>
+        <item>Enter Sandman</item>
+    </string-array>
+
+    <string-array name="Michael_Jackson_p">
+        <item>Billie Jean</item>
+        <item>Beat It</item>
+        <item>Smooth Criminal</item>
+        <item>Wana Be Starting Something</item>
+        <item>Bad</item>
+    </string-array>
+
+    <string-array name="AC_DC_p">
+        <item>Highway to Hell</item>
+        <item>Back in Black</item>
+        <item>Thunderstruck</item>
+        <item>You Shook Me All Night Long</item>
+        <item>Whole Lotta Rosie</item>
+    </string-array>
+
+    <string-array name="jazz_muzicari">
+        <item>Louis Armstrong</item>
+        <item>Duke Ellington</item>
+        <item>Charlie Parker</item>
+        <item>Miles Davis</item>
+        <item>Benny Goodman</item>
+    </string-array>
+
+    <string-array name="electonic_music">
+        <item>Deadmau5</item>
+        <item>Skrillex</item>
+        <item>Aphex Twin</item>
+        <item>Zedd</item>
+        <item>Knife Party</item>
+    </string-array>
+
+    <string-array name="metal_music">
+        <item>Iron Maiden</item>
+        <item>Slayer</item>
+        <item>Pantera</item>
+        <item>Judas Priest</item>
+        <item>Megadeth</item>
+    </string-array>
+
+    <string-array name="pop_music">
+        <item>Katy Perry</item>
+        <item>The Beatles</item>
+        <item>P!nk</item>
+        <item>Taylor Swift</item>
+        <item>Adele</item>
+    </string-array>
+
+    <string-array name="rock_music">
+        <item>Led Zeppelin</item>
+        <item>Black Sabbath</item>
+        <item>Jimi Hendrix</item>
+        <item>Pink Floyd</item>
+        <item>Aerosmith</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

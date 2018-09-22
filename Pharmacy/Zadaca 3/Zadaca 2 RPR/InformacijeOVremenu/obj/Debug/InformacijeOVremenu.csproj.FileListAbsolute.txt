@@ -1,0 +1,7 @@
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\InformacijeOVremenu\bin\Debug\InformacijeOVremenu.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\InformacijeOVremenu\bin\Debug\InformacijeOVremenu.pdb
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\InformacijeOVremenu\obj\Debug\InformacijeOVremenu.csprojResolveAssemblyReference.cache
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\InformacijeOVremenu\obj\Debug\InformacijeOVremenu.informacijeOVremenu_u.resources
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\InformacijeOVremenu\obj\Debug\InformacijeOVremenu.csproj.GenerateResource.Cache
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\InformacijeOVremenu\obj\Debug\InformacijeOVremenu.dll
+C:\Users\Semin\Desktop\Zadaca 3 user constrol\Zadaca 2 RPR\InformacijeOVremenu\obj\Debug\InformacijeOVremenu.pdb

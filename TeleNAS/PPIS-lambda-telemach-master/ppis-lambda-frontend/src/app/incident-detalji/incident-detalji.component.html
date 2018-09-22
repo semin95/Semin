@@ -1,0 +1,173 @@
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+  <a class="navbar-brand" href="#">T e l e N a s h</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+        <a class="nav-link" routerLink="/pocetnaOperater">
+          <i class="fa fa-fw fa-home"></i>
+          <span> &ensp; </span>
+          <span class="nav-link-text">Početna</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+        <a class="nav-link" routerLink="/zahtjeviOperater">
+          <i class="fa fa-fw fa-table"></i>
+          <span> &ensp; </span>
+          <span class="nav-link-text">Zahtjevi</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+        <a class="nav-link" routerLink="/incidentiOperater">
+          <i class="fa fa-fw fa-gears"></i>
+          <span> &ensp; </span>
+          <span class="nav-link-text">Incidenti</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav sidenav-toggler">
+      <li class="nav-item">
+        <a class="nav-link text-center" id="sidenavToggler">
+          <i class="fa fa-fw fa-angle-left"></i>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal5">
+          <i class="fa fa-fw fa-sign-out"></i>Odjavi se</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="content-wrapper" style="overflow-y: scroll;">
+
+  <div class="container-fluid">
+    <div class="panel panel-default" id="detalji_box" *ngIf="incident">
+      <div class="panel-heading">
+        <h3 style="margin-top: 20px; margin-left: 330px">Informacije o incidentu</h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="detalji">
+            <h6>
+              <b>Naziv: </b> {{ incident.name}}</h6>
+          </div>
+          <div class="detalji">
+            <h6>
+              <b>Opis: </b> {{ incident.description}}</h6>
+          </div>
+          <div class="detalji">
+            <h6>
+              <b>Datum: </b> {{ incident.date | date:'dd-MM-yyyy'}}</h6>
+          </div>
+          <div class="detalji">
+            <h6>
+              <b>Status: </b> {{ incident.status.name}}</h6>
+          </div>
+          <div class="detalji">
+            <h6>
+              <b>Korisnički prioritet: </b> {{ incident.userPriority.name}}</h6>
+          </div>
+          <div class="detalji" *ngIf="authService.isIncidentManager()">
+            <h5>
+              <b>Administratorski prioritet: </b> {{ incident.adminPriority.name}}</h5>
+          </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div style="margin-bottom: 30px" *ngIf="authService.isIncidentManager()">
+          <div class="btn1">
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal"
+                    data-target="#editIncident">Izmijeni incident
+            </button>
+          </div>
+          <div class="btn2">
+            <button type="button" class="btn btn-outline-danger" (click)="setAsProblem()">
+              <b>Prebaci u problem</b>
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div style="width: 98%">
+            <input type="text" class="form-control" placeholder="Komentar" style="margin: 10px" aria-label="Komentar"
+                   aria-describedby="basic-addon2" id="komentar"
+                   [(ngModel)]="comment">
+          </div>
+          <div style="width: 20%;">
+            <button type="button" class="btn btn-outline-secondary" style="margin: 10px" (click)="createFeedback()">
+              Pošalji
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="table_komentari">
+            <h4> Komentari: </h4>
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Autor</th>
+                <th scope="col">Komentar</th>
+                <th scope="col">Datum</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="red" scope="row" *ngFor="let feedback of feedbackIncidents; let i = index;">
+                <td>{{i+1}}</td>
+                <td>{{feedback?.user?.username}}</td>
+                <td>{{feedback?.comment}}</td>
+                <td>{{feedback?.date | date:'dd-MM-yyyy'}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-edit-incident [incident]="incident"></app-edit-incident>
+  </div>
+
+  <footer class="sticky-footer">
+    <div class="container">
+      <div class="text-center">
+        <small>Copyright © TeleNash 2018</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Želite se odjaviti?</h5>
+          <button class="close" id="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Odustani</button>
+          <a class="btn btn-primary" style="background-color: rgb(226, 101, 28)!important;" (click)="odjaviSe()">Odjavi
+            se</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+
+<router-outlet></router-outlet>

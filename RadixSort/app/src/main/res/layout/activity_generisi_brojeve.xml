@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#D5FCFF"
+    android:layout_height="match_parent"
+    tools:context="com.example.radix_sort.radixsort.GenerisiBrojeve">
+
+    <TextView
+        android:id="@+id/randomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Generate random numbers" />
+
+    <TextView
+        android:id="@+id/interval"
+        android:layout_below="@id/randomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:layout_marginTop="28dp"
+        android:layout_centerHorizontal="true"
+        android:text="Interval [a,b]" />
+
+    <EditText
+        android:id="@+id/pocetakIntervala"
+        android:layout_below="@+id/interval"
+        android:layout_centerHorizontal="true"
+        android:hint="a="
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:backgroundTint="#33b5e5"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <EditText
+        android:id="@+id/krajIntervala"
+        android:layout_below="@+id/pocetakIntervala"
+        android:layout_centerHorizontal="true"
+        android:hint="b="
+        android:layout_marginTop="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#33b5e5"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/numberText"
+        android:layout_below="@id/krajIntervala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22dp"
+        android:layout_marginTop="28dp"
+        android:layout_centerHorizontal="true"
+        android:text="Number of elements" />
+
+    <EditText
+        android:id="@+id/brojElemenata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberText"
+        android:backgroundTint="#33b5e5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:hint="n="
+        android:inputType="numberSigned" />
+
+    <Button
+        android:id="@+id/generisi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#87CEFA"
+        android:text="generate array" />
+
+</RelativeLayout>

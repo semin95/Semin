@@ -1,0 +1,184 @@
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7340 Graphics (ID=0x9808)
+    Vendor:   ATI
+    VRAM:     1205 MB
+    Driver:   15.201.1151.0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\LitJson.dll (this message is harmless)
+Loading C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\LitJson.dll into Unity Child Domain
+- Completed reload, in  0.426 seconds
+Platform assembly: C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object 'testni podaci') is missing!
+ 
+(Filename:  Line: 1754)
+
+UnloadTime: 41.465969 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 2c34 -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 17.833715 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 331.
+Total: 0.633621 ms (FindLiveObjects: 0.083879 ms CreateObjectMapping: 0.047068 ms MarkObjects: 0.476120 ms  DeleteObjects: 0.024741 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at ucitaj1.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Resursi\highscore.json".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllText (System.String path, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllText (System.String path) [0x00000] in <filename unknown>:0 
+  at readJson.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+The referenced script on this Behaviour (Game Object 'testni podaci') is missing!
+ 
+(Filename:  Line: 1754)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.921465 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 345.
+Total: 0.695172 ms (FindLiveObjects: 0.087500 ms CreateObjectMapping: 0.043448 ms MarkObjects: 0.542500 ms  DeleteObjects: 0.019913 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.170086 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 325.
+Total: 0.707845 ms (FindLiveObjects: 0.132155 ms CreateObjectMapping: 0.051896 ms MarkObjects: 0.499051 ms  DeleteObjects: 0.021724 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.789742 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 2106.
+Total: 1.411466 ms (FindLiveObjects: 0.375345 ms CreateObjectMapping: 0.332500 ms MarkObjects: 0.604655 ms  DeleteObjects: 0.097758 ms)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Resursi\highscore.json".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllText (System.String path, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllText (System.String path) [0x00000] in <filename unknown>:0 
+  at vrijemeScena1.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 26.893894 ms
+
+Unloading 384 unused Assets to reduce memory usage. Loaded Objects now: 348.
+Total: 49.793560 ms (FindLiveObjects: 0.144827 ms CreateObjectMapping: 0.098362 ms MarkObjects: 0.645086 ms  DeleteObjects: 48.903473 ms)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Resursi\Igra.json".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.WriteAllText (System.String path, System.String contents, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.WriteAllText (System.String path, System.String contents) [0x00000] in <filename unknown>:0 
+  at Total.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.924483 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2134.
+Total: 2.515173 ms (FindLiveObjects: 1.468793 ms CreateObjectMapping: 0.176206 ms MarkObjects: 0.827931 ms  DeleteObjects: 0.041034 ms)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Resursi\highscore.json".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllText (System.String path, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllText (System.String path) [0x00000] in <filename unknown>:0 
+  at scena2.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 48.762264 ms
+
+Unloading 384 unused Assets to reduce memory usage. Loaded Objects now: 348.
+Total: 26.694754 ms (FindLiveObjects: 0.160517 ms CreateObjectMapping: 0.091120 ms MarkObjects: 0.773621 ms  DeleteObjects: 25.666477 ms)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Resursi\Igra.json".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamWriter..ctor (System.String path, Boolean append, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.WriteAllText (System.String path, System.String contents, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.WriteAllText (System.String path, System.String contents) [0x00000] in <filename unknown>:0 
+  at Total.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.956466 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 2135.
+Total: 1.381293 ms (FindLiveObjects: 0.391034 ms CreateObjectMapping: 0.150258 ms MarkObjects: 0.792931 ms  DeleteObjects: 0.045258 ms)
+
+IsolatedStorageException: Could not find a part of the path "C:\Users\Semin\Desktop\rg3zadaca\soba_Data\Resursi\highscore.json".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) [0x00000] in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share) [0x00000] in <filename unknown>:0 
+  at System.IO.File.OpenRead (System.String path) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) [0x00000] in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllText (System.String path, System.Text.Encoding encoding) [0x00000] in <filename unknown>:0 
+  at System.IO.File.ReadAllText (System.String path) [0x00000] in <filename unknown>:0 
+  at scena3.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at scena3.upisiUHighscore () [0x00000] in <filename unknown>:0 
+  at scena3.OnGUI () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 41.367004 ms
+
+Unloading 385 unused Assets to reduce memory usage. Loaded Objects now: 347.
+Total: 53.454681 ms (FindLiveObjects: 0.136379 ms CreateObjectMapping: 0.091724 ms MarkObjects: 0.765172 ms  DeleteObjects: 52.458992 ms)
+
+The referenced script on this Behaviour (Game Object 'testni podaci') is missing!
+ 
+(Filename:  Line: 1754)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.412673 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 374.
+Total: 1.106121 ms (FindLiveObjects: 0.139396 ms CreateObjectMapping: 0.044655 ms MarkObjects: 0.894310 ms  DeleteObjects: 0.025344 ms)
+

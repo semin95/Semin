@@ -1,0 +1,131 @@
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <a class="navbar-brand" href="index.html">T e l e N a s h</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+                    <a class="nav-link" routerLink="/pocetna">
+                        <i class="fa fa-fw fa-home"></i>
+                        <span> </span>
+                        <span class="nav-link-text">Početna</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+                    <a class="nav-link" routerLink="/mojeusluge">
+                        <i class="fa fa-fw fa-handshake-o"></i>
+                        <span> </span>
+                        <span class="nav-link-text">Moje Usluge</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+                    <a class="nav-link" routerLink="/mojizahtjevi">
+                        <i class="fa fa-fw fa-table"></i>
+                        <span> </span>
+                        <span class="nav-link-text">Moji zahtjevi</span>
+                    </a>
+                </li>
+                <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+                    <a class="nav-link" routerLink="/incident">
+                        <i class="fa fa-fw fa-gears"></i>
+                        <span> </span>
+                        <span class="nav-link-text">Moji incidenti</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav sidenav-toggler">
+                <li class="nav-item">
+                    <a class="nav-link text-center" id="sidenavToggler">
+                        <i class="fa fa-fw fa-angle-left"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <span style="color: oldlace; margin-top: 30px; margin-right: 20px;">Dobrodošli, @{{getCurrentUserInfo()}}</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#exampleModal1">
+                        <i class="fa fa-fw fa-sign-out"></i>Odjavi se</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content-wrapper">
+
+        <div class="container-fluid">
+            <div class="text-center">
+                <h1 id="naslov" style="color: rgb(233, 118, 24); margin-bottom: 50px;"> Usluge u ponudi </h1>
+            </div>
+
+            <!--<div class="panel panel-default" *ngFor="let product of products" id="naslov_usluga5">
+                <h3 id="naslov_usluga"> {{product.name}}</h3>
+                <div class="panel-body"> {{product.description}} </div>
+                <h3 id="cijena_usluga"> Osnovna cijena: {{product.price}} KM</h3>
+                <button type="button" class="btn btn-primary" id="btn_novi_zahtjev" (click)="podnesiZahtjevUsluga(product);" data-toggle="modal"
+                    data-target="#exampleModal">Podnesi zahtjev za uslugu</button>
+            </div>-->
+
+            <!-- Card -->
+            <div class="card card-image mb-3" *ngFor="let product of products" style="width: 1000px; margin-left: 110px; margin-bottom: 100px; background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+                <div style="background-color: rgba(49, 49, 49, 0.541);">
+                    <!-- Content -->
+                    <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                        <div style="width: 1000px">
+                            <h5 class="pink-text" style="text-align: center">
+                                <i class="fa fa-dropbox" style="color: rgb(238, 143, 65)"></i> Proizvod</h5>
+                            <h3 class="card-title pt-2" style="text-align: center; border-bottom-width: 1px; border-bottom-color:  rgb(233, 118, 24);">
+                                <strong>{{product.name}}</strong>
+                            </h3>
+                            <p style="text-align: center; color: oldlace;">{{product.description}}</p>
+                            <h2 class="card-title pt-2" style="text-align: center">
+                                <strong style="color: rgb(238, 143, 65)">Osnovna cijena: {{product.price}} KM</strong>
+                            </h2>
+                          <button type="button" class="btn btn-light" data-toggle="modal" (click)="onSelect(product)"
+                                  data-target="#createRequest">
+                                <i class="fa fa-clone left"></i> Podnesi zahtjev za uslugom
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+              <app-edit-request [id]="'createRequest'" [product]="selectedProduct"></app-edit-request>
+
+              <!-- Content -->
+            </div>
+        </div>
+
+        <footer class="sticky-footer">
+            <div class="container">
+                <div class="text-center">
+                    <small>Copyright © TeleNash 2018</small>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Želite li se odjaviti?</h5>
+                        <button class="close" id="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Odustani</button>
+                        <a class="btn btn-primary" style="background-color: rgb(226, 101, 28)!important;" (click)="odjaviSe()">Odjavi se</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<router-outlet></router-outlet>

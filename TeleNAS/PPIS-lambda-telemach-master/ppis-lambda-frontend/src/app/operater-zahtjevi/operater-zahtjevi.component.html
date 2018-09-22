@@ -1,0 +1,261 @@
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="#">T e l e N a s h</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" routerLink="/pocetnaOperater">
+            <i class="fa fa-fw fa-home"></i>
+            <span> &ensp; </span>
+            <span class="nav-link-text">Početna</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" routerLink="/zahtjeviOperater">
+            <i class="fa fa-fw fa-table"></i>
+            <span> &ensp; </span>
+            <span class="nav-link-text">Zahtjevi</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" routerLink="/incidentiOperater">
+            <i class="fa fa-fw fa-gears"></i>
+            <span> &ensp; </span>
+            <span class="nav-link-text">Incidenti</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal5">
+            <i class="fa fa-fw fa-sign-out"></i>Odjavi se</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+
+    <div class="container-fluid">
+      <div class="text-center">
+        <h1 id="naslov" style="color: rgb(233, 118, 24); margin-bottom: 30px; margin-top: 20px;"> Zahtjevi </h1>
+      </div>
+
+      <div class="text-center" id="usluge-tabela">
+        <table class="table table-hover">
+          <thead class="zaglavlje">
+            <tr>
+              <th class="naziv-kolone" scope="col" style="text-align: center"> Naziv zahtjeva </th>
+              <th class="naziv-kolone" scope="col" style="text-align: center"> Status </th>
+              <th class="naziv-kolone" scope="col" style="text-align: center"> Prioritet </th>
+              <th class="naziv-kolone" scope="col" style="text-align: center"> Detalji </th>
+              <th class="naziv-kolone" scope="col" style="text-align: center"> Otkaži zahtjev </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="red" scope="row" *ngFor="let zahtjev of zahtjevi">
+              <td class="kolona">{{ zahtjev.name }}</td>
+              <td class="kolona">{{ zahtjev.status.name }}</td>
+              <td class="kolona">{{ zahtjev.userPriority.name }}</td>
+              <td class="kolona-btn">
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" (click)="prikaziDetalje(zahtjev)">Detalji</button>
+              </td>
+              <td class="kolona-btn">
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#delete2Modal" (click)="otkaziZahtjev(zahtjev)">Otkaži zahtjev</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel"> Detalji o podnesnom zahtjevu </h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group" *ngIf="soloZahtjev">
+                  <label for="recipient-name" class="col-form-label">Zahtjev na uslugu: </label>
+                  <input type="text" class="form-control" value="{{ odabrani_zahjev.product.name }}" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Naziv zahtjeva:</label>
+                  <input type="text" class="form-control" value="{{ odabrani_zahjev.name }}" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Opis zahtjeva:</label>
+                  <textarea class="form-control" style="height: 150px" value="{{ odabrani_zahjev.description }}" disabled></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Način odgovora na zahtjev:</label>
+                  <input type="text" class="form-control" value="{{ odabrani_zahjev.wayOfResponse }}" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Status:</label>
+                  <input type="text" class="form-control" value="{{ odabrani_zahjev.status.name }}" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Prioritet:</label>
+                  <input type="text" class="form-control" value="{{ odabrani_zahjev.userPriority.name }}" disabled>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel"> Uredi zahtjev </h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Zahtjev na uslugu: </label>
+                  <input type="text" class="form-control" value="{{ odabrani_zahjev.product.name }}" disabled>
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Naziv zahtjeva:</label>
+                  <input type="text" class="form-control" value="{{ odabrani_zahjev.name }}">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="col-form-label">Opis zahtjeva:</label>
+                  <textarea class="form-control" style="height: 150px" value="{{ odabrani_zahjev.description }}"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Način odgovora na zahtjev:</label>
+                  <br>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="{{ wayOfResponseTelefon }}" [(ngModel)]="wayOfResponseTelefon" [ngModelOptions]="{standalone: true}">Telefon</label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="{{ wayOfResponseEmail }}" [(ngModel)]="wayOfResponseEmail" [ngModelOptions]="{standalone: true}">E-mail</label>
+                </div>
+                <div class="form-group">
+                  <label for="hitnost" class="col-form-label">Prioritet:</label>
+                  <select class="form-control" id="hitnost" [(ngModel)]="odabraniPrioritet" name="priorities">
+                    <option *ngFor="let p of prioriteti" [value]="p.id">{{p.name}}</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+              <button type="button" class="btn btn-primary" id="btn_podnesi_zahtjev" (click)="urediiZahtjev()">Uredi zahtjev</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel"> Zahtjev za uslugom </h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="naziv_usluga" class="col-form-label">Naziv zahtjeva:</label>
+                  <input type="text" class="form-control" [(ngModel)]="request.name" [ngModelOptions]="{standalone: true}">
+                </div>
+                <div class="form-group">
+                  <label for="detalji_zahtjev" class="col-form-label">Detalji zahtjeva:</label>
+                  <textarea class="form-control" style="height: 150px" [(ngModel)]="request.description" [ngModelOptions]="{standalone: true}"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="col-form-label">Način odgovaranja:</label>
+                  <br>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="Telefon" [(ngModel)]="wayOfResponseTelefonRequest" [ngModelOptions]="{standalone: true}">Telefon</label>
+                  <label class="checkbox-inline">
+                    <input type="checkbox" value="E-mail" [(ngModel)]="wayOfResponseEmailRequest" [ngModelOptions]="{standalone: true}">E-mail</label>
+                </div>
+                <div class="form-group">
+                  <label for="hitnost" class="col-form-label">Prioritet:</label>
+                  <select class="form-control" id="hitnost" [(ngModel)]="odabraniPrioritet" name="priorities">
+                    <option *ngFor="let p of prioriteti" [value]="p.id">{{p.name}}</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+              <button type="button" class="btn btn-primary" id="btn_podnesi_zahtjev" data-dismiss="modal" (click)="podnesiZahtjev()">Podnesi zahtjev</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="delete2Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel"> Zahtjev uspješno otkazan!</h3>
+            </div>
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" id="btn_modal_usluga" data-dismiss="modal" (click)="loadajStranicu()">Zatvori</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <footer class="sticky-footer">
+        <div class="container">
+          <div class="text-center">
+            <small>Copyright © TeleNash 2018</small>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Logout Modal-->
+      <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Želite se odjaviti?</h5>
+              <button class="close" id="close" type="button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" type="button" data-dismiss="modal">Odustani</button>
+              <a class="btn btn-primary" style="background-color: rgb(226, 101, 28)!important;" (click)="odjaviSe()">Odjavi se</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+
+<router-outlet></router-outlet>
